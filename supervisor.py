@@ -32,6 +32,7 @@ from dataclasses import dataclass, field, asdict
 from pathlib import Path
 
 import httpx
+import context_loader
 
 OLLAMA = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 OPTI = os.getenv("OPTI_HOST", "")          # remote P40 brain over Tailscale
@@ -65,11 +66,11 @@ class RunTrace:
 
 # ── Provider calls with fallback ────────────────────────────────────────────
 
-def _ollama_chat(host: str, model: str, messages: list[dict]) -> dict | None:
+def _ollama_chat(host: str, model: str, messages: list[dict], timeout: int = 300) -> dict | None:
     try:
         r = httpx.post(f"{host}/api/chat",
                        json={"model": model, "messages": messages, "stream": False},
-                       timeout=120)
+                       timeout=timeout)
         r.raise_for_status()
         data = r.json()
         return {
@@ -107,10 +108,10 @@ def classify_task(text: str, trace: RunTrace) -> str:
     trace.log("classifying task type with phi3:mini…")
     result = _ollama_chat(OLLAMA, "phi3:mini", [
         {"role": "system", "content":
-         "Classify the task into ONE word: classify, summarize, code, research, or chat. "
-         "Reply with only the word."},
+         "Classify the task into ONE word: summarize, code, research, or chat. "
+         "Reply with only that single word, nothing else."},
         {"role": "user", "content": text[:400]},
-    ])
+    ], timeout=30)
     if result:
         word = result["content"].strip().lower()
         for t in ROUTING:
@@ -123,14 +124,28 @@ def classify_task(text: str, trace: RunTrace) -> str:
 
 # ── The routed run with fallback chain ──────────────────────────────────────
 
-def run_task(text: str, forced_type: str | None = None) -> tuple[str, RunTrace]:
-    trace = RunTrace()
+def run_task(
+    text: str,
+    forced_type: str | None = None,
+    trace: RunTrace | None = None,
+) -> tuple[str, RunTrace]:
+    if trace is None:
+        trace = RunTrace()
     t0 = time.time()
+
+    # Load context from Obsidian vault + graphify knowledge graph
+    ctx = context_loader.get_context(text)
+    if ctx:
+        trace.log(f"loaded {len(ctx)} chars of context from knowledge base")
 
     task_type = forced_type or classify_task(text, trace)
     trace.task_type = task_type
 
-    messages = [{"role": "user", "content": text}]
+    messages: list[dict] = []
+    if ctx:
+        messages.append({"role": "system", "content": ctx})
+    messages.append({"role": "user", "content": text})
+
     models = ROUTING.get(task_type, ["gemma2:9b"])
 
     # Fallback chain: local models → remote (OptiPlex) → OpenRouter
