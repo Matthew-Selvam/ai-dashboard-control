@@ -71,7 +71,10 @@ async def _run_task_bg(run_id: str, prompt: str, task_type: Optional[str]):
     loop = asyncio.get_running_loop()
 
     def patched_run(text, forced_type=None):
-        # Build a trace with WS-broadcasting log(), then delegate to run_task
+        # Capture context and store it on the run before delegating
+        ctx = sup.context_loader.get_context(text)
+        RUNS[run_id]["context"] = ctx
+
         trace = sup.RunTrace()
         original_log = trace.log
 
@@ -132,7 +135,7 @@ async def health():
 @app.post("/api/task", response_model=TaskResponse)
 async def submit_task(req: TaskRequest):
     run_id = str(uuid.uuid4())[:8]
-    RUNS[run_id] = {"status": "queued", "prompt": req.prompt, "result": None, "trace": None}
+    RUNS[run_id] = {"status": "queued", "prompt": req.prompt, "result": None, "trace": None, "context": ""}
     asyncio.ensure_future(_run_task_bg(run_id, req.prompt, req.task_type))
     return TaskResponse(run_id=run_id)
 
@@ -150,6 +153,13 @@ async def list_runs():
         {"run_id": k, "status": v["status"], "prompt": v.get("prompt", "")[:80]}
         for k, v in RUNS.items()
     ]
+
+
+@app.get("/api/context/{run_id}")
+async def get_context(run_id: str):
+    if run_id not in RUNS:
+        return {"error": "not found"}
+    return {"run_id": run_id, "context": RUNS[run_id].get("context", "")}
 
 
 @app.get("/api/stats")
