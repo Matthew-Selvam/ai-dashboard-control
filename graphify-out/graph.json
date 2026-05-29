@@ -1,0 +1,2691 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "server.py",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L1",
+      "id": "server_py",
+      "community": 2,
+      "norm_label": "server.py"
+    },
+    {
+      "label": "TaskRequest",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L53",
+      "id": "ai_dashboard_control_server_taskrequest",
+      "community": 2,
+      "norm_label": "taskrequest"
+    },
+    {
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "basemodel",
+      "community": 2,
+      "norm_label": "basemodel"
+    },
+    {
+      "label": "TaskResponse",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L58",
+      "id": "ai_dashboard_control_server_taskresponse",
+      "community": 2,
+      "norm_label": "taskresponse"
+    },
+    {
+      "label": "_run_task_bg()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L65",
+      "id": "ai_dashboard_control_server_run_task_bg",
+      "community": 2,
+      "norm_label": "_run_task_bg()"
+    },
+    {
+      "label": "_broadcast()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L117",
+      "id": "ai_dashboard_control_server_broadcast",
+      "community": 2,
+      "norm_label": "_broadcast()"
+    },
+    {
+      "label": "health()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L131",
+      "id": "ai_dashboard_control_server_health",
+      "community": 2,
+      "norm_label": "health()"
+    },
+    {
+      "label": "submit_task()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L136",
+      "id": "ai_dashboard_control_server_submit_task",
+      "community": 2,
+      "norm_label": "submit_task()"
+    },
+    {
+      "label": "get_task()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L144",
+      "id": "ai_dashboard_control_server_get_task",
+      "community": 2,
+      "norm_label": "get_task()"
+    },
+    {
+      "label": "list_runs()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L151",
+      "id": "ai_dashboard_control_server_list_runs",
+      "community": 2,
+      "norm_label": "list_runs()"
+    },
+    {
+      "label": "get_context()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L159",
+      "id": "ai_dashboard_control_server_get_context",
+      "community": 2,
+      "norm_label": "get_context()"
+    },
+    {
+      "label": "stats()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L166",
+      "id": "ai_dashboard_control_server_stats",
+      "community": 2,
+      "norm_label": "stats()"
+    },
+    {
+      "label": "ws_trace()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L175",
+      "id": "ai_dashboard_control_server_ws_trace",
+      "community": 2,
+      "norm_label": "ws_trace()"
+    },
+    {
+      "label": "ws_dashboard()",
+      "file_type": "code",
+      "source_file": "server.py",
+      "source_location": "L195",
+      "id": "ai_dashboard_control_server_ws_dashboard",
+      "community": 2,
+      "norm_label": "ws_dashboard()"
+    },
+    {
+      "label": "Run supervisor.run_task in a thread and push trace events to WS clients.",
+      "file_type": "rationale",
+      "source_file": "server.py",
+      "source_location": "L66",
+      "id": "ai_dashboard_control_server_rationale_66",
+      "community": 2,
+      "norm_label": "run supervisor.run_task in a thread and push trace events to ws clients."
+    },
+    {
+      "label": "supervisor.py",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L1",
+      "id": "supervisor_py",
+      "community": 4,
+      "norm_label": "supervisor.py"
+    },
+    {
+      "label": "RunTrace",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L52",
+      "id": "ai_dashboard_control_supervisor_runtrace",
+      "community": 4,
+      "norm_label": "runtrace"
+    },
+    {
+      "label": ".log()",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L62",
+      "id": "ai_dashboard_control_supervisor_runtrace_log",
+      "community": 4,
+      "norm_label": ".log()"
+    },
+    {
+      "label": "_ollama_chat()",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L69",
+      "id": "ai_dashboard_control_supervisor_ollama_chat",
+      "community": 4,
+      "norm_label": "_ollama_chat()"
+    },
+    {
+      "label": "_openrouter_chat()",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L85",
+      "id": "ai_dashboard_control_supervisor_openrouter_chat",
+      "community": 4,
+      "norm_label": "_openrouter_chat()"
+    },
+    {
+      "label": "classify_task()",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L107",
+      "id": "ai_dashboard_control_supervisor_classify_task",
+      "community": 4,
+      "norm_label": "classify_task()"
+    },
+    {
+      "label": "run_task()",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L127",
+      "id": "ai_dashboard_control_supervisor_run_task",
+      "community": 4,
+      "norm_label": "run_task()"
+    },
+    {
+      "label": "_record_stats()",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L193",
+      "id": "ai_dashboard_control_supervisor_record_stats",
+      "community": 4,
+      "norm_label": "_record_stats()"
+    },
+    {
+      "label": "show_stats()",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L210",
+      "id": "ai_dashboard_control_supervisor_show_stats",
+      "community": 4,
+      "norm_label": "show_stats()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "supervisor.py",
+      "source_location": "L223",
+      "id": "ai_dashboard_control_supervisor_main",
+      "community": 4,
+      "norm_label": "main()"
+    },
+    {
+      "label": "context_loader.py",
+      "file_type": "code",
+      "source_file": "context_loader.py",
+      "source_location": "L1",
+      "id": "context_loader_py",
+      "community": 5,
+      "norm_label": "context_loader.py"
+    },
+    {
+      "label": "_keywords()",
+      "file_type": "code",
+      "source_file": "context_loader.py",
+      "source_location": "L47",
+      "id": "ai_dashboard_control_context_loader_keywords",
+      "community": 5,
+      "norm_label": "_keywords()"
+    },
+    {
+      "label": "_search_obsidian()",
+      "file_type": "code",
+      "source_file": "context_loader.py",
+      "source_location": "L59",
+      "id": "ai_dashboard_control_context_loader_search_obsidian",
+      "community": 5,
+      "norm_label": "_search_obsidian()"
+    },
+    {
+      "label": "_read_file()",
+      "file_type": "code",
+      "source_file": "context_loader.py",
+      "source_location": "L94",
+      "id": "ai_dashboard_control_context_loader_read_file",
+      "community": 5,
+      "norm_label": "_read_file()"
+    },
+    {
+      "label": "_query_graphify()",
+      "file_type": "code",
+      "source_file": "context_loader.py",
+      "source_location": "L106",
+      "id": "ai_dashboard_control_context_loader_query_graphify",
+      "community": 5,
+      "norm_label": "_query_graphify()"
+    },
+    {
+      "label": "get_context()",
+      "file_type": "code",
+      "source_file": "context_loader.py",
+      "source_location": "L133",
+      "id": "ai_dashboard_control_context_loader_get_context",
+      "community": 5,
+      "norm_label": "get_context()"
+    },
+    {
+      "label": "context_loader.py ================= Loads relevant context from:   1. Obsidian v",
+      "file_type": "rationale",
+      "source_file": "context_loader.py",
+      "source_location": "L1",
+      "id": "ai_dashboard_control_context_loader_rationale_1",
+      "community": 5,
+      "norm_label": "context_loader.py ================= loads relevant context from:   1. obsidian v"
+    },
+    {
+      "label": "Return (hit_count, path) sorted by relevance.      Longer / more specific keywor",
+      "file_type": "rationale",
+      "source_file": "context_loader.py",
+      "source_location": "L60",
+      "id": "ai_dashboard_control_context_loader_rationale_60",
+      "community": 5,
+      "norm_label": "return (hit_count, path) sorted by relevance.      longer / more specific keywor"
+    },
+    {
+      "label": "Return a markdown context block to inject into the supervisor system message.",
+      "file_type": "rationale",
+      "source_file": "context_loader.py",
+      "source_location": "L134",
+      "id": "ai_dashboard_control_context_loader_rationale_134",
+      "community": 5,
+      "norm_label": "return a markdown context block to inject into the supervisor system message."
+    },
+    {
+      "label": "start.sh",
+      "file_type": "code",
+      "source_file": "start.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "id": "start_sh",
+      "community": 14,
+      "norm_label": "start.sh"
+    },
+    {
+      "label": "start.sh script",
+      "file_type": "code",
+      "source_file": "start.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "id": "users_matthewselvam_code_ai_dashboard_control_start_sh__entry",
+      "community": 14,
+      "norm_label": "start.sh script"
+    },
+    {
+      "label": "postcss.config.mjs",
+      "file_type": "code",
+      "source_file": "dashboard/postcss.config.mjs",
+      "source_location": "L1",
+      "id": "dashboard_postcss_config_mjs",
+      "community": 13,
+      "norm_label": "postcss.config.mjs"
+    },
+    {
+      "label": "config",
+      "file_type": "code",
+      "source_file": "dashboard/postcss.config.mjs",
+      "source_location": "L1",
+      "id": "dashboard_postcss_config_config",
+      "community": 13,
+      "norm_label": "config"
+    },
+    {
+      "label": "next-env.d.ts",
+      "file_type": "code",
+      "source_file": "dashboard/next-env.d.ts",
+      "source_location": "L1",
+      "id": "dashboard_next_env_d_ts",
+      "community": 15,
+      "norm_label": "next-env.d.ts"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L1",
+      "id": "dashboard_package_json",
+      "community": 1,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L2",
+      "id": "dashboard_package_name",
+      "community": 1,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L3",
+      "id": "dashboard_package_version",
+      "community": 1,
+      "norm_label": "version"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L4",
+      "id": "dashboard_package_private",
+      "community": 1,
+      "norm_label": "private"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L5",
+      "id": "dashboard_package_scripts",
+      "community": 1,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L6",
+      "id": "dashboard_package_scripts_dev",
+      "community": 1,
+      "norm_label": "dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L7",
+      "id": "dashboard_package_scripts_build",
+      "community": 1,
+      "norm_label": "build"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L8",
+      "id": "dashboard_package_scripts_start",
+      "community": 1,
+      "norm_label": "start"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L10",
+      "id": "dashboard_package_dependencies",
+      "community": 1,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "next",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L11",
+      "id": "dashboard_package_dependencies_next",
+      "community": 1,
+      "norm_label": "next"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L12",
+      "id": "dashboard_package_dependencies_react",
+      "community": 1,
+      "norm_label": "react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L13",
+      "id": "dashboard_package_dependencies_react_dom",
+      "community": 1,
+      "norm_label": "react-dom"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L15",
+      "id": "dashboard_package_devdependencies",
+      "community": 1,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "@tailwindcss/postcss",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L16",
+      "id": "dashboard_package_devdependencies_tailwindcss_postcss",
+      "community": 1,
+      "norm_label": "@tailwindcss/postcss"
+    },
+    {
+      "label": "@types/node",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L17",
+      "id": "dashboard_package_devdependencies_types_node",
+      "community": 1,
+      "norm_label": "@types/node"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L18",
+      "id": "dashboard_package_devdependencies_types_react",
+      "community": 1,
+      "norm_label": "@types/react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L19",
+      "id": "dashboard_package_devdependencies_types_react_dom",
+      "community": 1,
+      "norm_label": "@types/react-dom"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L20",
+      "id": "dashboard_package_devdependencies_tailwindcss",
+      "community": 1,
+      "norm_label": "tailwindcss"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "dashboard/package.json",
+      "source_location": "L21",
+      "id": "dashboard_package_devdependencies_typescript",
+      "community": 1,
+      "norm_label": "typescript"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L1",
+      "id": "dashboard_tsconfig_json",
+      "community": 0,
+      "norm_label": "tsconfig.json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L2",
+      "id": "dashboard_tsconfig_compileroptions",
+      "community": 0,
+      "norm_label": "compileroptions"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L3",
+      "id": "dashboard_tsconfig_compileroptions_target",
+      "community": 0,
+      "norm_label": "target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L4",
+      "id": "dashboard_tsconfig_compileroptions_lib",
+      "community": 0,
+      "norm_label": "lib"
+    },
+    {
+      "label": "allowJs",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L5",
+      "id": "dashboard_tsconfig_compileroptions_allowjs",
+      "community": 0,
+      "norm_label": "allowjs"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L6",
+      "id": "dashboard_tsconfig_compileroptions_skiplibcheck",
+      "community": 0,
+      "norm_label": "skiplibcheck"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L7",
+      "id": "dashboard_tsconfig_compileroptions_strict",
+      "community": 0,
+      "norm_label": "strict"
+    },
+    {
+      "label": "noEmit",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L8",
+      "id": "dashboard_tsconfig_compileroptions_noemit",
+      "community": 0,
+      "norm_label": "noemit"
+    },
+    {
+      "label": "esModuleInterop",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L9",
+      "id": "dashboard_tsconfig_compileroptions_esmoduleinterop",
+      "community": 0,
+      "norm_label": "esmoduleinterop"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L10",
+      "id": "dashboard_tsconfig_compileroptions_module",
+      "community": 0,
+      "norm_label": "module"
+    },
+    {
+      "label": "moduleResolution",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L11",
+      "id": "dashboard_tsconfig_compileroptions_moduleresolution",
+      "community": 0,
+      "norm_label": "moduleresolution"
+    },
+    {
+      "label": "resolveJsonModule",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L12",
+      "id": "dashboard_tsconfig_compileroptions_resolvejsonmodule",
+      "community": 0,
+      "norm_label": "resolvejsonmodule"
+    },
+    {
+      "label": "isolatedModules",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L13",
+      "id": "dashboard_tsconfig_compileroptions_isolatedmodules",
+      "community": 0,
+      "norm_label": "isolatedmodules"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L14",
+      "id": "dashboard_tsconfig_compileroptions_jsx",
+      "community": 0,
+      "norm_label": "jsx"
+    },
+    {
+      "label": "incremental",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L15",
+      "id": "dashboard_tsconfig_compileroptions_incremental",
+      "community": 0,
+      "norm_label": "incremental"
+    },
+    {
+      "label": "plugins",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L16",
+      "id": "dashboard_tsconfig_compileroptions_plugins",
+      "community": 0,
+      "norm_label": "plugins"
+    },
+    {
+      "label": "paths",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L21",
+      "id": "dashboard_tsconfig_compileroptions_paths",
+      "community": 0,
+      "norm_label": "paths"
+    },
+    {
+      "label": "@/*",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L22",
+      "id": "dashboard_tsconfig_paths",
+      "community": 0,
+      "norm_label": "@/*"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L25",
+      "id": "dashboard_tsconfig_include",
+      "community": 0,
+      "norm_label": "include"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L33",
+      "id": "dashboard_tsconfig_exclude",
+      "community": 0,
+      "norm_label": "exclude"
+    },
+    {
+      "label": "next.config.ts",
+      "file_type": "code",
+      "source_file": "dashboard/next.config.ts",
+      "source_location": "L1",
+      "id": "dashboard_next_config_ts",
+      "community": 12,
+      "norm_label": "next.config.ts"
+    },
+    {
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "dashboard/next.config.ts",
+      "source_location": "L3",
+      "id": "dashboard_next_config_nextconfig",
+      "community": 12,
+      "norm_label": "nextconfig"
+    },
+    {
+      "label": "layout.tsx",
+      "file_type": "code",
+      "source_file": "dashboard/app/layout.tsx",
+      "source_location": "L1",
+      "id": "dashboard_app_layout_tsx",
+      "community": 11,
+      "norm_label": "layout.tsx"
+    },
+    {
+      "label": "metadata",
+      "file_type": "code",
+      "source_file": "dashboard/app/layout.tsx",
+      "source_location": "L4",
+      "id": "app_layout_metadata",
+      "community": 11,
+      "norm_label": "metadata"
+    },
+    {
+      "label": "RootLayout()",
+      "file_type": "code",
+      "source_file": "dashboard/app/layout.tsx",
+      "source_location": "L9",
+      "id": "app_layout_rootlayout",
+      "community": 11,
+      "norm_label": "rootlayout()"
+    },
+    {
+      "label": "page.tsx",
+      "file_type": "code",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L1",
+      "id": "dashboard_app_page_tsx",
+      "community": 8,
+      "norm_label": "page.tsx"
+    },
+    {
+      "label": "ROSTER",
+      "file_type": "code",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L10",
+      "id": "app_page_roster",
+      "community": 8,
+      "norm_label": "roster"
+    },
+    {
+      "label": "FALLBACK",
+      "file_type": "code",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L17",
+      "id": "app_page_fallback",
+      "community": 8,
+      "norm_label": "fallback"
+    },
+    {
+      "label": "Dashboard()",
+      "file_type": "code",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L24",
+      "id": "app_page_dashboard",
+      "community": 8,
+      "norm_label": "dashboard()"
+    },
+    {
+      "label": "AgentCard.tsx",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L1",
+      "id": "dashboard_app_components_agentcard_tsx",
+      "community": 7,
+      "norm_label": "agentcard.tsx"
+    },
+    {
+      "label": "PROVIDER_COLOR",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L6",
+      "id": "components_agentcard_provider_color",
+      "community": 7,
+      "norm_label": "provider_color"
+    },
+    {
+      "label": "TASK_ICON",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L13",
+      "id": "components_agentcard_task_icon",
+      "community": 7,
+      "norm_label": "task_icon"
+    },
+    {
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L21",
+      "id": "components_agentcard_props",
+      "community": 7,
+      "norm_label": "props"
+    },
+    {
+      "label": "AgentCard()",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L26",
+      "id": "components_agentcard_agentcard",
+      "community": 7,
+      "norm_label": "agentcard()"
+    },
+    {
+      "label": "StatusBar.tsx",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/StatusBar.tsx",
+      "source_location": "L1",
+      "id": "dashboard_app_components_statusbar_tsx",
+      "community": 10,
+      "norm_label": "statusbar.tsx"
+    },
+    {
+      "label": "Health",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/StatusBar.tsx",
+      "source_location": "L6",
+      "id": "components_statusbar_health",
+      "community": 10,
+      "norm_label": "health"
+    },
+    {
+      "label": "Dot()",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/StatusBar.tsx",
+      "source_location": "L8",
+      "id": "components_statusbar_dot",
+      "community": 10,
+      "norm_label": "dot()"
+    },
+    {
+      "label": "StatusBar()",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/StatusBar.tsx",
+      "source_location": "L24",
+      "id": "components_statusbar_statusbar",
+      "community": 10,
+      "norm_label": "statusbar()"
+    },
+    {
+      "label": "TaskInput.tsx",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L1",
+      "id": "dashboard_app_components_taskinput_tsx",
+      "community": 9,
+      "norm_label": "taskinput.tsx"
+    },
+    {
+      "label": "TASK_TYPES",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L6",
+      "id": "components_taskinput_task_types",
+      "community": 9,
+      "norm_label": "task_types"
+    },
+    {
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L8",
+      "id": "components_taskinput_props",
+      "community": 9,
+      "norm_label": "props"
+    },
+    {
+      "label": "TaskInput()",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L12",
+      "id": "components_taskinput_taskinput",
+      "community": 9,
+      "norm_label": "taskinput()"
+    },
+    {
+      "label": "TokenPanel.tsx",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/TokenPanel.tsx",
+      "source_location": "L1",
+      "id": "dashboard_app_components_tokenpanel_tsx",
+      "community": 6,
+      "norm_label": "tokenpanel.tsx"
+    },
+    {
+      "label": "PROVIDER_COLOR",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/TokenPanel.tsx",
+      "source_location": "L6",
+      "id": "components_tokenpanel_provider_color",
+      "community": 6,
+      "norm_label": "provider_color"
+    },
+    {
+      "label": "TokenPanel()",
+      "file_type": "code",
+      "source_file": "dashboard/app/components/TokenPanel.tsx",
+      "source_location": "L12",
+      "id": "components_tokenpanel_tokenpanel",
+      "community": 6,
+      "norm_label": "tokenpanel()"
+    },
+    {
+      "label": "api.ts",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L1",
+      "id": "dashboard_app_lib_api_ts",
+      "community": 6,
+      "norm_label": "api.ts"
+    },
+    {
+      "label": "WS_BASE",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L4",
+      "id": "lib_api_ws_base",
+      "community": 6,
+      "norm_label": "ws_base"
+    },
+    {
+      "label": "TraceEvent",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L6",
+      "id": "lib_api_traceevent",
+      "community": 7,
+      "norm_label": "traceevent"
+    },
+    {
+      "label": "RunTrace",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L15",
+      "id": "lib_api_runtrace",
+      "community": 6,
+      "norm_label": "runtrace"
+    },
+    {
+      "label": "Run",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L26",
+      "id": "lib_api_run",
+      "community": 9,
+      "norm_label": "run"
+    },
+    {
+      "label": "Stats",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L37",
+      "id": "lib_api_stats",
+      "community": 6,
+      "norm_label": "stats"
+    },
+    {
+      "label": "submitTask()",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L44",
+      "id": "lib_api_submittask",
+      "community": 9,
+      "norm_label": "submittask()"
+    },
+    {
+      "label": "fetchRuns()",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L54",
+      "id": "lib_api_fetchruns",
+      "community": 8,
+      "norm_label": "fetchruns()"
+    },
+    {
+      "label": "fetchRun()",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L60",
+      "id": "lib_api_fetchrun",
+      "community": 8,
+      "norm_label": "fetchrun()"
+    },
+    {
+      "label": "fetchStats()",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L72",
+      "id": "lib_api_fetchstats",
+      "community": 6,
+      "norm_label": "fetchstats()"
+    },
+    {
+      "label": "fetchHealth()",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L78",
+      "id": "lib_api_fetchhealth",
+      "community": 10,
+      "norm_label": "fetchhealth()"
+    },
+    {
+      "label": "subscribeToRun()",
+      "file_type": "code",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L89",
+      "id": "lib_api_subscribetorun",
+      "community": 7,
+      "norm_label": "subscribetorun()"
+    },
+    {
+      "label": "AI Dashboard Control",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ai_dashboard_control_readme",
+      "community": 3,
+      "norm_label": "ai dashboard control"
+    },
+    {
+      "label": "Supervisor \u2014 Task Router",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ai_dashboard_control_supervisor",
+      "community": 3,
+      "norm_label": "supervisor \u2014 task router"
+    },
+    {
+      "label": "FastAPI Server",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ai_dashboard_control_server",
+      "community": 3,
+      "norm_label": "fastapi server"
+    },
+    {
+      "label": "Context Loader",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ai_dashboard_control_context_loader",
+      "community": 3,
+      "norm_label": "context loader"
+    },
+    {
+      "label": "Next.js Dashboard",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ai_dashboard_control_dashboard",
+      "community": 3,
+      "norm_label": "next.js dashboard"
+    },
+    {
+      "label": "Ollama Local LLM",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ai_dashboard_control_ollama",
+      "community": 3,
+      "norm_label": "ollama local llm"
+    },
+    {
+      "label": "OpenRouter Cloud Routing",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "ai_dashboard_control_openrouter",
+      "community": 3,
+      "norm_label": "openrouter cloud routing"
+    },
+    {
+      "label": "AI Dashboard Control \u2014 Tier 3 POC Brief",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_ai_dashboard_control",
+      "community": 3,
+      "norm_label": "ai dashboard control \u2014 tier 3 poc brief"
+    },
+    {
+      "label": "OpenClaw Model",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_openclaw",
+      "community": 3,
+      "norm_label": "openclaw model"
+    },
+    {
+      "label": "Next.js Agent Rules (breaking changes warning)",
+      "file_type": "document",
+      "source_file": "dashboard/AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_md_nextjs_rules",
+      "community": 3,
+      "norm_label": "next.js agent rules (breaking changes warning)"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_taskrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_taskresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_run_task_bg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_broadcast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_health",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_submit_task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_get_task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_list_runs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_get_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_ws_trace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "server_py",
+      "target": "ai_dashboard_control_server_ws_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_server_taskrequest",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_server_taskresponse",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_server_submit_task",
+      "target": "ai_dashboard_control_server_taskresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_server_run_task_bg",
+      "target": "ai_dashboard_control_server_broadcast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_server_submit_task",
+      "target": "ai_dashboard_control_server_run_task_bg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "server.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_server_rationale_66",
+      "target": "ai_dashboard_control_server_run_task_bg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "supervisor_py",
+      "target": "ai_dashboard_control_supervisor_runtrace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "supervisor_py",
+      "target": "ai_dashboard_control_supervisor_ollama_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "supervisor_py",
+      "target": "ai_dashboard_control_supervisor_openrouter_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "supervisor_py",
+      "target": "ai_dashboard_control_supervisor_classify_task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "supervisor_py",
+      "target": "ai_dashboard_control_supervisor_run_task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "supervisor_py",
+      "target": "ai_dashboard_control_supervisor_record_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "supervisor_py",
+      "target": "ai_dashboard_control_supervisor_show_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "supervisor_py",
+      "target": "ai_dashboard_control_supervisor_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_runtrace",
+      "target": "ai_dashboard_control_supervisor_runtrace_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_run_task",
+      "target": "ai_dashboard_control_supervisor_runtrace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_classify_task",
+      "target": "ai_dashboard_control_supervisor_runtrace_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_run_task",
+      "target": "ai_dashboard_control_supervisor_runtrace_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L109",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_classify_task",
+      "target": "ai_dashboard_control_supervisor_ollama_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_run_task",
+      "target": "ai_dashboard_control_supervisor_ollama_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_run_task",
+      "target": "ai_dashboard_control_supervisor_openrouter_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_run_task",
+      "target": "ai_dashboard_control_supervisor_classify_task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_run_task",
+      "target": "ai_dashboard_control_supervisor_record_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L244",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_main",
+      "target": "ai_dashboard_control_supervisor_run_task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "supervisor.py",
+      "source_location": "L237",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor_main",
+      "target": "ai_dashboard_control_supervisor_show_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "context_loader_py",
+      "target": "ai_dashboard_control_context_loader_keywords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "context_loader_py",
+      "target": "ai_dashboard_control_context_loader_search_obsidian",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "context_loader_py",
+      "target": "ai_dashboard_control_context_loader_read_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "context_loader_py",
+      "target": "ai_dashboard_control_context_loader_query_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "context_loader_py",
+      "target": "ai_dashboard_control_context_loader_get_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_context_loader_rationale_1",
+      "target": "context_loader_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_context_loader_get_context",
+      "target": "ai_dashboard_control_context_loader_keywords",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_context_loader_get_context",
+      "target": "ai_dashboard_control_context_loader_search_obsidian",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_context_loader_rationale_60",
+      "target": "ai_dashboard_control_context_loader_search_obsidian",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_context_loader_get_context",
+      "target": "ai_dashboard_control_context_loader_read_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_context_loader_get_context",
+      "target": "ai_dashboard_control_context_loader_query_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "context_loader.py",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "ai_dashboard_control_context_loader_rationale_134",
+      "target": "ai_dashboard_control_context_loader_get_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "start.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "start_sh",
+      "target": "users_matthewselvam_code_ai_dashboard_control_start_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/postcss.config.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "dashboard_postcss_config_mjs",
+      "target": "dashboard_postcss_config_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "dashboard_package_json",
+      "target": "dashboard_package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "dashboard_package_json",
+      "target": "dashboard_package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_package_json",
+      "target": "dashboard_package_private",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "dashboard_package_json",
+      "target": "dashboard_package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "dashboard_package_json",
+      "target": "dashboard_package_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "dashboard_package_json",
+      "target": "dashboard_package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_package_scripts",
+      "target": "dashboard_package_scripts_dev",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "dashboard_package_scripts",
+      "target": "dashboard_package_scripts_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "dashboard_package_scripts",
+      "target": "dashboard_package_scripts_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "dashboard_package_dependencies",
+      "target": "dashboard_package_dependencies_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "dashboard_package_dependencies",
+      "target": "dashboard_package_dependencies_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "dashboard_package_dependencies",
+      "target": "dashboard_package_dependencies_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_tailwindcss_postcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_types_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_types_react",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_types_react_dom",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_tailwindcss",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "dashboard_package_devdependencies",
+      "target": "dashboard_package_devdependencies_typescript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_json",
+      "target": "dashboard_tsconfig_compileroptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_json",
+      "target": "dashboard_tsconfig_include",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_json",
+      "target": "dashboard_tsconfig_exclude",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_target",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_lib",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_allowjs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_skiplibcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_strict",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_noemit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_esmoduleinterop",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_moduleresolution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_resolvejsonmodule",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_isolatedmodules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_incremental",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_plugins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions",
+      "target": "dashboard_tsconfig_compileroptions_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/tsconfig.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "dashboard_tsconfig_compileroptions_paths",
+      "target": "dashboard_tsconfig_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/next.config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "dashboard_next_config_ts",
+      "target": "dashboard_next_config_nextconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/layout.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_layout_tsx",
+      "target": "app_layout_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/layout.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "dashboard_app_layout_tsx",
+      "target": "app_layout_rootlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "dashboard_app_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "lib_api_fetchrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "lib_api_fetchruns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "lib_api_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "dashboard_app_components_agentcard_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "dashboard_app_components_taskinput_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "dashboard_app_components_tokenpanel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "dashboard_app_components_statusbar_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "app_page_roster",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "app_page_fallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/page.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "dashboard_app_page_tsx",
+      "target": "app_page_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_agentcard_tsx",
+      "target": "dashboard_app_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_agentcard_tsx",
+      "target": "lib_api_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_agentcard_tsx",
+      "target": "lib_api_traceevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_agentcard_tsx",
+      "target": "lib_api_subscribetorun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_app_components_agentcard_tsx",
+      "target": "components_agentcard_provider_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "dashboard_app_components_agentcard_tsx",
+      "target": "components_agentcard_task_icon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "dashboard_app_components_agentcard_tsx",
+      "target": "components_agentcard_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/AgentCard.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "dashboard_app_components_agentcard_tsx",
+      "target": "components_agentcard_agentcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/StatusBar.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_statusbar_tsx",
+      "target": "dashboard_app_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/StatusBar.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_statusbar_tsx",
+      "target": "lib_api_fetchhealth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/StatusBar.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_app_components_statusbar_tsx",
+      "target": "components_statusbar_health",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/StatusBar.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "dashboard_app_components_statusbar_tsx",
+      "target": "components_statusbar_dot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/StatusBar.tsx",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "dashboard_app_components_statusbar_tsx",
+      "target": "components_statusbar_statusbar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_taskinput_tsx",
+      "target": "dashboard_app_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_taskinput_tsx",
+      "target": "lib_api_submittask",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_taskinput_tsx",
+      "target": "lib_api_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_app_components_taskinput_tsx",
+      "target": "components_taskinput_task_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "dashboard_app_components_taskinput_tsx",
+      "target": "components_taskinput_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TaskInput.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "dashboard_app_components_taskinput_tsx",
+      "target": "components_taskinput_taskinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TokenPanel.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_tokenpanel_tsx",
+      "target": "dashboard_app_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TokenPanel.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_tokenpanel_tsx",
+      "target": "lib_api_fetchstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TokenPanel.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_components_tokenpanel_tsx",
+      "target": "lib_api_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TokenPanel.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_app_components_tokenpanel_tsx",
+      "target": "components_tokenpanel_provider_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/components/TokenPanel.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "dashboard_app_components_tokenpanel_tsx",
+      "target": "components_tokenpanel_tokenpanel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_ws_base",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_traceevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_runtrace",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_stats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_submittask",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_fetchruns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_fetchrun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_fetchstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_fetchhealth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "dashboard/app/lib/api.ts",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "dashboard_app_lib_api_ts",
+      "target": "lib_api_subscribetorun",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ai_dashboard_control_readme",
+      "target": "ai_dashboard_control_supervisor"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ai_dashboard_control_readme",
+      "target": "ai_dashboard_control_server"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ai_dashboard_control_readme",
+      "target": "ai_dashboard_control_context_loader"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ai_dashboard_control_readme",
+      "target": "ai_dashboard_control_dashboard"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_md_ai_dashboard_control",
+      "target": "ai_dashboard_control_readme"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor",
+      "target": "ai_dashboard_control_ollama"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ai_dashboard_control_supervisor",
+      "target": "ai_dashboard_control_openrouter"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "ai_dashboard_control_server",
+      "target": "ai_dashboard_control_supervisor"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "dashboard/AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_md_nextjs_rules",
+      "target": "ai_dashboard_control_dashboard"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_md_ai_dashboard_control",
+      "target": "claude_md_openclaw"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "e7431581dd9bfb1ffa4ffab3ffd7d6dfbdd72bfc"
+}

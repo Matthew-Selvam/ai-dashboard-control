@@ -46,7 +46,7 @@ export default function TaskInput({ onSubmit }: Props) {
 
       {/* Header row */}
       <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--green)" }}>
+        <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--primary)" }}>
           ⟩ Dispatch Task
         </span>
         <div style={{ flex: 1 }} />

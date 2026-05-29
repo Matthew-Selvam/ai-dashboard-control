@@ -1,0 +1,132 @@
+{
+  "/Users/matthewselvam/code/ai-dashboard-control/server.py": {
+    "mtime": 1780047764.4834018,
+    "ast_hash": "11cea8ea7034b13dd0b7d844d25a3e80",
+    "semantic_hash": "11cea8ea7034b13dd0b7d844d25a3e80"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/supervisor.py": {
+    "mtime": 1780047735.0132453,
+    "ast_hash": "ae06afd6aa86bb2bacbed83db23aad52",
+    "semantic_hash": "ae06afd6aa86bb2bacbed83db23aad52"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/context_loader.py": {
+    "mtime": 1780047780.2463558,
+    "ast_hash": "45833548382ebdb966d3aa01f6c97eb5",
+    "semantic_hash": "45833548382ebdb966d3aa01f6c97eb5"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/start.sh": {
+    "mtime": 1779946710.1942656,
+    "ast_hash": "11584be1d49d2c013e59e3778845edfd",
+    "semantic_hash": "11584be1d49d2c013e59e3778845edfd"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/postcss.config.mjs": {
+    "mtime": 1779946480.538769,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/next-env.d.ts": {
+    "mtime": 1779976084.9497192,
+    "ast_hash": "2a74d3909800ca5467fa83b0ab4a4890",
+    "semantic_hash": "2a74d3909800ca5467fa83b0ab4a4890"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/package.json": {
+    "mtime": 1779946480.5403557,
+    "ast_hash": "9756e6e252e4f185a3f854f840f23272",
+    "semantic_hash": "9756e6e252e4f185a3f854f840f23272"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/tsconfig.json": {
+    "mtime": 1779946480.5400398,
+    "ast_hash": "02fc19ad21338c2ab820a70136310db4",
+    "semantic_hash": "02fc19ad21338c2ab820a70136310db4"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/next.config.ts": {
+    "mtime": 1779946480.5385659,
+    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
+    "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/app/layout.tsx": {
+    "mtime": 1779946575.4222155,
+    "ast_hash": "1d1bdb6a4c11e64f6def67c681d24a33",
+    "semantic_hash": "1d1bdb6a4c11e64f6def67c681d24a33"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/app/page.tsx": {
+    "mtime": 1780047838.6363351,
+    "ast_hash": "574d6a1c400b85cbc312e2a05128a3c0",
+    "semantic_hash": "574d6a1c400b85cbc312e2a05128a3c0"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/app/components/AgentCard.tsx": {
+    "mtime": 1780029660.0346286,
+    "ast_hash": "ec843e69d628f14a95414a728951c351",
+    "semantic_hash": "ec843e69d628f14a95414a728951c351"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/app/components/StatusBar.tsx": {
+    "mtime": 1779976026.5887039,
+    "ast_hash": "1552f5451f9a6fc7f5517e53584dba93",
+    "semantic_hash": "1552f5451f9a6fc7f5517e53584dba93"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/app/components/TaskInput.tsx": {
+    "mtime": 1779975984.8742552,
+    "ast_hash": "233267cbf9c995cecf28d750c7741622",
+    "semantic_hash": "233267cbf9c995cecf28d750c7741622"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/app/components/TokenPanel.tsx": {
+    "mtime": 1779976048.2650933,
+    "ast_hash": "a7567597f3a67f3585fcb6b24cede2f6",
+    "semantic_hash": "a7567597f3a67f3585fcb6b24cede2f6"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/app/lib/api.ts": {
+    "mtime": 1780047777.2640417,
+    "ast_hash": "bbe71c6479e0175a62dc3cd387ff8eb6",
+    "semantic_hash": "bbe71c6479e0175a62dc3cd387ff8eb6"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/README.md": {
+    "mtime": 1780037430.1305273,
+    "ast_hash": "a94ee0cc71b1f7c24db1cc1ff0f8985a",
+    "semantic_hash": "a94ee0cc71b1f7c24db1cc1ff0f8985a"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/CLAUDE.md": {
+    "mtime": 1779880389.8939114,
+    "ast_hash": "35555d62125044d9c44309d2b81e3db1",
+    "semantic_hash": "35555d62125044d9c44309d2b81e3db1"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/README.md": {
+    "mtime": 1779946480.5382595,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/AGENTS.md": {
+    "mtime": 1779946526.9428802,
+    "ast_hash": "9e09241799026ac05be315a2f0b50055",
+    "semantic_hash": "9e09241799026ac05be315a2f0b50055"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/CLAUDE.md": {
+    "mtime": 1779946526.942986,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/public/file.svg": {
+    "mtime": 1779946480.539017,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/public/vercel.svg": {
+    "mtime": 1779946480.538949,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/public/next.svg": {
+    "mtime": 1779946480.538973,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/public/globe.svg": {
+    "mtime": 1779946480.5387993,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "/Users/matthewselvam/code/ai-dashboard-control/dashboard/public/window.svg": {
+    "mtime": 1779946480.5389597,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  }
+}

@@ -3,19 +3,46 @@
 import { useEffect, useRef, useState } from "react";
 import { Run, TraceEvent, subscribeToRun } from "../lib/api";
 
+// ── Agent mascot map ───────────────────────────────────────────────────────────
+// Mascot spec: kronos=⊕  cipher=⟨/⟩  scout=◎  vision=◈  quill=✦  atlas=∑  pulse=~
+
+interface AgentInfo {
+  icon:  string;
+  label: string;
+  color: string;
+}
+
+const AGENT_MASCOT: Record<string, AgentInfo> = {
+  kronos: { icon: "⊕",   label: "Kronos", color: "#e63329" },
+  cipher: { icon: "⟨/⟩", label: "Cipher", color: "#f97316" },
+  scout:  { icon: "◎",   label: "Scout",  color: "#f97316" },
+  vision: { icon: "◈",   label: "Vision", color: "#e63329" },
+  quill:  { icon: "✦",   label: "Quill",  color: "#f97316" },
+  atlas:  { icon: "∑",   label: "Atlas",  color: "#e63329" },
+  pulse:  { icon: "~",   label: "Pulse",  color: "#f97316" },
+};
+
+// task_type returned by supervisor → agent responsible
+const TASK_TO_AGENT: Record<string, string> = {
+  code:      "cipher",
+  summarize: "quill",
+  research:  "scout",
+  chat:      "quill",
+  classify:  "kronos",
+  data:      "atlas",
+  vision:    "vision",
+  monitor:   "pulse",
+  // fallback: kronos as orchestrator
+};
+
+const DEFAULT_AGENT: AgentInfo = AGENT_MASCOT.kronos;
+
+// ── Provider color ─────────────────────────────────────────────────────────────
 const PROVIDER_COLOR: Record<string, string> = {
   "ollama-local":  "var(--green)",
   "ollama-remote": "var(--blue)",
   "openrouter":    "var(--amber)",
   "":              "var(--dimmer)",
-};
-
-const TASK_ICON: Record<string, string> = {
-  code:      "⟨/⟩",
-  summarize: "∑",
-  research:  "◎",
-  chat:      "◇",
-  classify:  "◈",
 };
 
 interface Props {
@@ -29,9 +56,10 @@ export default function AgentCard({ run, onUpdate }: Props) {
 
   useEffect(() => {
     setLive(run);
+    let cancelled = false;
     if (run.status === "queued" || run.status === "running") {
       wsRef.current?.close();
-      const ws = subscribeToRun(run.run_id, (e: TraceEvent) => {
+      subscribeToRun(run.run_id, (e: TraceEvent) => {
         setLive((prev) => {
           const next = { ...prev };
           if (e.type === "trace" && e.msg) {
@@ -48,10 +76,15 @@ export default function AgentCard({ run, onUpdate }: Props) {
           onUpdate?.(next);
           return next;
         });
+      }).then((ws) => {
+        if (cancelled) { ws.close(); return; }
+        wsRef.current = ws;
       });
-      wsRef.current = ws;
     }
-    return () => wsRef.current?.close();
+    return () => {
+      cancelled = true;
+      wsRef.current?.close();
+    };
   }, [run.run_id, run.status, run.result]);  // eslint-disable-line react-hooks/exhaustive-deps
 
   const isRunning = live.status === "running";
@@ -60,7 +93,7 @@ export default function AgentCard({ run, onUpdate }: Props) {
 
   const glowClass =
     isRunning ? "glow-amber" :
-    isDone    ? "glow-green" :
+    isDone    ? "glow-done"  :
     isError   ? "glow-red"   : "";
 
   const badgeClass =
@@ -70,13 +103,44 @@ export default function AgentCard({ run, onUpdate }: Props) {
     "badge badge-queued";
 
   const provColor = PROVIDER_COLOR[live.trace?.provider ?? ""] ?? "var(--dimmer)";
-  const taskIcon  = TASK_ICON[live.trace?.task_type ?? ""] ?? "◇";
+
+  // Resolve agent from task_type
+  const agentId  = TASK_TO_AGENT[live.trace?.task_type ?? ""] ?? "kronos";
+  const agent    = AGENT_MASCOT[agentId] ?? DEFAULT_AGENT;
 
   return (
     <div className={`glass fade-up ${glowClass}`} style={{ padding: 16, display: "flex", flexDirection: "column", gap: 12 }}>
 
-      {/* Header */}
+      {/* ── Header ── */}
       <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+
+        {/* Mascot icon + agent badge */}
+        <div style={{
+          display: "flex", alignItems: "center", gap: 6,
+          padding: "3px 10px 3px 8px",
+          borderRadius: 6,
+          background: `${agent.color}14`,
+          border: `1px solid ${agent.color}40`,
+          flexShrink: 0,
+        }}>
+          <span style={{
+            fontSize: 16,
+            lineHeight: 1,
+            color: agent.color,
+            fontFamily: "inherit",
+          }}>
+            {agent.icon}
+          </span>
+          <span style={{
+            fontSize: 11,
+            fontWeight: 700,
+            color: agent.color,
+            letterSpacing: "0.3px",
+          }}>
+            {agent.label}
+          </span>
+        </div>
+
         {/* Status badge */}
         <span className={badgeClass}>
           {isRunning && (
@@ -97,14 +161,14 @@ export default function AgentCard({ run, onUpdate }: Props) {
           {live.run_id}
         </span>
 
-        {/* Task type */}
+        {/* Task type chip */}
         {live.trace?.task_type && (
           <span style={{
-            fontSize: 11, fontWeight: 600, padding: "2px 8px",
-            border: "1px solid rgba(157,125,250,0.3)", borderRadius: 4,
-            color: "var(--purple)",
+            fontSize: 10, fontWeight: 600, padding: "2px 8px",
+            border: "1px solid var(--border2)", borderRadius: 4,
+            color: "var(--dim)",
           }}>
-            {taskIcon} {live.trace.task_type}
+            {live.trace.task_type}
           </span>
         )}
 
@@ -124,13 +188,13 @@ export default function AgentCard({ run, onUpdate }: Props) {
         )}
       </div>
 
-      {/* Prompt */}
+      {/* ── Prompt ── */}
       <div style={{ fontSize: 12, color: "var(--dim)", lineHeight: 1.5 }}>
-        <span style={{ color: "var(--green)", marginRight: 6 }}>›</span>
+        <span style={{ color: agent.color, marginRight: 6 }}>›</span>
         {live.prompt.slice(0, 140)}{live.prompt.length > 140 ? "…" : ""}
       </div>
 
-      {/* Live steps */}
+      {/* ── Live steps ── */}
       {(live.steps?.length ?? 0) > 0 && (
         <div style={{
           background: "var(--panel2)",
@@ -145,16 +209,16 @@ export default function AgentCard({ run, onUpdate }: Props) {
         }}>
           {live.steps!.map((s, i) => (
             <div key={i} style={{ color: "var(--dim)" }}>
-              <span style={{ color: "var(--green)", marginRight: 4 }}>[supervisor]</span>{s}
+              <span style={{ color: "var(--secondary)", marginRight: 4 }}>[supervisor]</span>{s}
             </div>
           ))}
           {isRunning && (
-            <span className="cursor" style={{ color: "var(--green)" }}>█</span>
+            <span className="cursor" style={{ color: "var(--amber)" }}>█</span>
           )}
         </div>
       )}
 
-      {/* Result */}
+      {/* ── Result ── */}
       {live.result && (
         <div style={{
           borderRadius: 6,
@@ -170,8 +234,13 @@ export default function AgentCard({ run, onUpdate }: Props) {
             background: "rgba(61,220,132,0.08)",
             borderBottom: "1px solid rgba(61,220,132,0.15)",
           }}>
-            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: "var(--green)" }}>
-              ◈ Result
+            <span style={{
+              fontSize: 9, fontWeight: 700, letterSpacing: "1.5px",
+              textTransform: "uppercase", color: "var(--green)",
+              display: "flex", alignItems: "center", gap: 6,
+            }}>
+              <span style={{ color: agent.color }}>{agent.icon}</span>
+              Result
             </span>
             <button
               onClick={() => navigator.clipboard?.writeText(live.result!)}
@@ -202,7 +271,7 @@ export default function AgentCard({ run, onUpdate }: Props) {
         </div>
       )}
 
-      {/* Error */}
+      {/* ── Error ── */}
       {live.error && (
         <div style={{
           borderRadius: 6, padding: "8px 12px", fontSize: 12,
@@ -214,7 +283,7 @@ export default function AgentCard({ run, onUpdate }: Props) {
         </div>
       )}
 
-      {/* Trace footer */}
+      {/* ── Trace footer ── */}
       {live.trace && (
         <div style={{
           display: "flex", gap: 16, fontSize: 11, flexWrap: "wrap",

@@ -2,17 +2,26 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { fetchRun, fetchRuns, Run } from "./lib/api";
+import { AGENTS, AGENT_ORDER } from "./lib/agents";
 import AgentCard from "./components/AgentCard";
 import TaskInput from "./components/TaskInput";
 import TokenPanel from "./components/TokenPanel";
 import StatusBar from "./components/StatusBar";
+import ModelArena from "./components/ModelArena";
 
-const ROSTER = [
-  { id: "kronos", icon: "⊕", label: "Kronos",  role: "Orchestrator",     color: "#a78bfa" },
-  { id: "leon",   icon: "◈", label: "Leon",    role: "Messaging / UI",   color: "#60a5fa" },
-  { id: "atlas",  icon: "∑", label: "Atlas",   role: "Data / Analytics", color: "#f59e0b" },
-  { id: "nova",   icon: "◎", label: "Nova",    role: "Research",         color: "#4ade80" },
-];
+// Derive roster from the single source of truth (agents.ts).
+// Override colors with brand palette: alternate red/orange per agent.
+const BRAND_COLORS: Record<string, string> = {
+  kronos: "#e63329", cipher: "#f97316", scout: "#f97316",
+  vision: "#e63329", quill: "#f97316", atlas: "#e63329", pulse: "#f97316",
+};
+const ROSTER = AGENT_ORDER.map((id) => ({
+  id,
+  icon: AGENTS[id].icon,
+  label: id.charAt(0).toUpperCase() + id.slice(1),
+  role: AGENTS[id].role,
+  color: BRAND_COLORS[id] ?? AGENTS[id].color,
+}));
 
 const FALLBACK = [
   { label: "local Ollama",    color: "var(--green)" },
@@ -21,8 +30,11 @@ const FALLBACK = [
   { label: "heuristic save",  color: "var(--red)" },
 ];
 
+type Tab = "tasks" | "arena";
+
 export default function Dashboard() {
   const [runs, setRuns] = useState<Run[]>([]);
+  const [tab, setTab] = useState<Tab>("tasks");
 
   // Hydrate on mount, then poll every 4s to catch runs submitted elsewhere
   useEffect(() => {
@@ -129,6 +141,29 @@ export default function Dashboard() {
 
         <div style={{ width: 1, background: "var(--border)", margin: "8px 0" }} />
 
+        {/* Tabs */}
+        <div style={{ display: "flex", gap: 4 }}>
+          {(["tasks", "arena"] as Tab[]).map((t) => (
+            <button
+              key={t}
+              onClick={() => setTab(t)}
+              style={{
+                background: tab === t ? "var(--green)" : "var(--panel2)",
+                color: tab === t ? "#fff" : "var(--dimmer)",
+                border: `1px solid ${tab === t ? "var(--green)" : "var(--border2)"}`,
+                borderRadius: 6, padding: "4px 14px",
+                fontFamily: "inherit", fontSize: 11, fontWeight: 700,
+                letterSpacing: 0.5, textTransform: "uppercase",
+                cursor: "pointer", transition: "all 0.12s",
+              }}
+            >
+              {t === "tasks" ? "Tasks" : "⚡ Arena"}
+            </button>
+          ))}
+        </div>
+
+        <div style={{ width: 1, background: "var(--border)", margin: "8px 0" }} />
+
         {/* Status bar */}
         <StatusBar />
       </header>
@@ -163,24 +198,29 @@ export default function Dashboard() {
 
         {/* ── Main canvas ── */}
         <main style={{ flex: 1, display: "flex", flexDirection: "column", overflowY: "auto", padding: 20, gap: 16 }}>
-          <TaskInput onSubmit={handleNewRun} />
-
-          {runs.length === 0 ? (
-            <div style={{
-              flex: 1, display: "flex", flexDirection: "column",
-              alignItems: "center", justifyContent: "center",
-              gap: 12, textAlign: "center", color: "var(--dimmer)", padding: 60,
-            }}>
-              <div style={{ fontSize: 48, color: "var(--border2)", lineHeight: 1 }}>◎</div>
-              <div style={{ fontSize: 14, color: "var(--dim)" }}>No tasks yet.</div>
-              <div style={{ fontSize: 12 }}>Submit a task above — the supervisor classifies, routes, and runs it.</div>
-            </div>
+          {tab === "tasks" ? (
+            <>
+              <TaskInput onSubmit={handleNewRun} />
+              {runs.length === 0 ? (
+                <div style={{
+                  flex: 1, display: "flex", flexDirection: "column",
+                  alignItems: "center", justifyContent: "center",
+                  gap: 12, textAlign: "center", color: "var(--dimmer)", padding: 60,
+                }}>
+                  <div style={{ fontSize: 48, color: "var(--border2)", lineHeight: 1 }}>◎</div>
+                  <div style={{ fontSize: 14, color: "var(--dim)" }}>No tasks yet.</div>
+                  <div style={{ fontSize: 12 }}>Submit a task above — the supervisor classifies, routes, and runs it.</div>
+                </div>
+              ) : (
+                <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                  {runs.map((run) => (
+                    <AgentCard key={run.run_id} run={run} onUpdate={handleUpdate} />
+                  ))}
+                </div>
+              )}
+            </>
           ) : (
-            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              {runs.map((run) => (
-                <AgentCard key={run.run_id} run={run} onUpdate={handleUpdate} />
-              ))}
-            </div>
+            <ModelArena />
           )}
         </main>
 

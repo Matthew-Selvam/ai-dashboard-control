@@ -56,37 +56,56 @@ def _keywords(text: str) -> list[str]:
 
 # ── Obsidian search ───────────────────────────────────────────────────────────
 
-def _search_obsidian(keywords: list[str]) -> list[tuple[int, Path]]:
+def _search_obsidian(
+    keywords: list[str],
+    folders: list[str] | None = None,
+) -> list[tuple[int, Path]]:
     """Return (hit_count, path) sorted by relevance.
 
     Longer / more specific keywords (likely proper nouns or project names)
     get a boosted weight so that a file uniquely matching 'offsidesupply'
     outranks a file that only matches common words like 'content' or 'strategy'.
+
+    If `folders` is provided, restrict search to those subdirectories of
+    OBSIDIAN_ROOT (e.g. ["03-Code/", "04-Tech-Specs/"] for cipher agent).
     """
     if not OBSIDIAN_ROOT.exists():
         return []
 
+    # Resolve search roots: specific folders or the whole vault
+    if folders:
+        search_roots = []
+        for f in folders:
+            candidate = OBSIDIAN_ROOT / f
+            if candidate.exists():
+                search_roots.append(candidate)
+        if not search_roots:
+            return []  # none of the agent's folders exist yet
+    else:
+        search_roots = [OBSIDIAN_ROOT]
+
     hits: dict[Path, int] = {}
     for kw in keywords[:MAX_KEYWORDS]:
-        try:
-            r = subprocess.run(
-                ["grep", "-r", "-l", "-i", "--include=*.md", kw, str(OBSIDIAN_ROOT)],
-                capture_output=True, text=True, timeout=5,
-            )
-            matched = [Path(l) for l in r.stdout.strip().splitlines() if l]
-            if not matched:
+        for root in search_roots:
+            try:
+                r = subprocess.run(
+                    ["grep", "-r", "-l", "-i", "--include=*.md", kw, str(root)],
+                    capture_output=True, text=True, timeout=5,
+                )
+                matched = [Path(l) for l in r.stdout.strip().splitlines() if l]
+                if not matched:
+                    continue
+                # Specificity boost: the fewer files a keyword appears in, the more
+                # diagnostic it is. 1 file = weight 20, 2 = 10, 3–5 = 5, else = 1.
+                # Also multiply by length bonus for longer (more unique) words.
+                specificity = 20 if len(matched) == 1 else (10 if len(matched) == 2
+                              else (5 if len(matched) <= 5 else 1))
+                length_bonus = max(1, len(kw) - 5)
+                weight = specificity * length_bonus
+                for p in matched:
+                    hits[p] = hits.get(p, 0) + weight
+            except Exception:
                 continue
-            # Specificity boost: the fewer files a keyword appears in, the more
-            # diagnostic it is. 1 file = weight 20, 2 = 10, 3–5 = 5, else = 1.
-            # Also multiply by length bonus for longer (more unique) words.
-            specificity = 20 if len(matched) == 1 else (10 if len(matched) == 2
-                          else (5 if len(matched) <= 5 else 1))
-            length_bonus = max(1, len(kw) - 5)
-            weight = specificity * length_bonus
-            for p in matched:
-                hits[p] = hits.get(p, 0) + weight
-        except Exception:
-            continue
 
     return sorted(hits.items(), key=lambda x: -x[1])
 
@@ -130,10 +149,13 @@ def _query_graphify(query: str) -> str:
 
 # ── Public API ────────────────────────────────────────────────────────────────
 
-def get_context(task: str) -> str:
+def get_context(task: str, folders: list[str] | None = None) -> str:
     """
     Return a markdown context block to inject into the supervisor system message.
     Returns empty string if nothing relevant was found.
+
+    If `folders` is provided, restrict Obsidian search to those subdirectories
+    (e.g. ["03-Code/", "04-Tech-Specs/"] for the cipher agent).
     """
     keywords = _keywords(task)
     if not keywords:
@@ -143,7 +165,7 @@ def get_context(task: str) -> str:
     used_chars = 0
 
     # --- Obsidian ---
-    ranked = _search_obsidian(keywords)
+    ranked = _search_obsidian(keywords, folders=folders)
     for path, _hits in ranked[:TOP_FILES]:
         remaining = MAX_CONTEXT_CHARS - used_chars
         if remaining <= 200:
