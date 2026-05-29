@@ -225,8 +225,14 @@ def main() -> None:
     parser.add_argument("prompt", nargs="?", help="The task/prompt")
     parser.add_argument("--task", help="Force task type", choices=list(ROUTING.keys()))
     parser.add_argument("--stats", action="store_true")
+    parser.add_argument("--list-models", action="store_true", help="Print all models in the ROUTING table")
     args = parser.parse_args()
 
+    if args.list_models:
+        for task_type, models in ROUTING.items():
+            for model in models:
+                print(f"{task_type}: {model}")
+        return
     if args.stats:
         show_stats()
         return
